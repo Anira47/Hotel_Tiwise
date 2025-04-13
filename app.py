@@ -27,6 +27,7 @@ if selected_hotel:
     else:
         # Drop target column and make predictions
         X = hotel_df.drop(columns=['is_canceled'])
+        X = X.fillna(X.mean(numeric_only=True)) 
         hotel_df['predicted_risk'] = model.predict_proba(X)[:, 1]
 
         # Group by lead_time and average predicted risk
