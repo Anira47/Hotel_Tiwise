@@ -4,9 +4,9 @@ import joblib
 import matplotlib.pyplot as plt
 
 # Load model, encoders, and data
-model = joblib.load('model/hotel_cancellation_model.pkl')
-label_encoders = joblib.load('model/label_encoders.pkl')
-df = pd.read_csv('model/preprocessed_data.csv')
+model = joblib.load('hotel_cancellation_model.pkl')
+label_encoders = joblib.load('label_encoders.pkl')
+df = pd.read_csv('preprocessed_data.csv')
 
 st.title("🏨 Hotel Cancellation Risk Predictor")
 
